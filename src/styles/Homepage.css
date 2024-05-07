@@ -2,7 +2,7 @@ body {
   background-color: #ea7750;
 }
 .homepage {
-    padding: 2rem 0 0 2cqi;
+    padding: 2rem ;
 }
 .homepage-subbackground {
   display: flex;
@@ -11,13 +11,42 @@ body {
   height: 100vh;
 }
 .side-bar {
-  flex: 2%;
+  flex: 20%;
   background-color: white;
   height: 100%;
   border-radius: 0.4rem;
 }
 .homepage-main {
-  flex: 70%;
+  flex: 90%;
   background-color: #f3f3f7;
   height: 100%;
+}
+.heading{
+    margin: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.shelf{
+    letter-spacing: 10px;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin: 6rem 0 0 3rem;
+}
+.link-li{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+.link-li:hover{
+  color: blue;
 }
