@@ -1,0 +1,12 @@
+.homepage-subbackground{
+    display: flex;
+
+}
+.side-bar{
+    flex: 30%;
+    background-color:white ;
+}
+.homepage-subbackground{
+    flex:70%;
+    background-color: #f3f3f7;
+}
