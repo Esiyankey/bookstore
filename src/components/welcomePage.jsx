@@ -1,8 +1,14 @@
-import {useEffect,useState} from 'react'
+import React from "react";
+import "../styles/welcome.css";
 
-export const welcomePage = () => {
-   
+export const WelcomePage = () => {
   return (
-    <div> My Book <br/> Shelf </div>
-  )
-}
+    <div className="welcome-note">
+      {" "}
+      <div>
+        My <span style={{color:"#ea7750"}}>Book</span>
+      </div>
+      <div> Shelf</div>{" "}
+    </div>
+  );
+};
