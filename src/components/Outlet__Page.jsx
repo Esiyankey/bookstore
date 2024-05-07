@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const searchBar = () => {
+export const Outlet__Page = () => {
   return (
     <div>
         
