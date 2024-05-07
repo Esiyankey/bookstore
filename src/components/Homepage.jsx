@@ -1,13 +1,14 @@
 import React from "react";
-import { SideBar } from "./sidebar";
 import { HomepageMain } from "./HomepageMain";
+import { Side_Bar } from "./Side_Bar";
+import '../styles/Homepage.css'
 
 export const Homepage = () => {
   return (
-    <div className="homepage-background">
+    <div className="homepage">
       <div className="homepage-subbackground">
-        <SideBar/>
-        <HomepageMain/>
+        <Side_Bar />
+        <HomepageMain />
       </div>
     </div>
   );
