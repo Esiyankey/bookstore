@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import { Homepage } from './components/Homepage'
+// import { Homepage } from './components/Homepage'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Login from './components/Login';
+import Register from "./components/Register";
 
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Homepage />,
+      element:<Login/> ,
     }
   ]);
   return (
