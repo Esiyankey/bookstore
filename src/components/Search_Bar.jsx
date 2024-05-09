@@ -3,6 +3,7 @@ import { GoTriangleDown } from "react-icons/go";
 import { FaStaylinked } from "react-icons/fa6";
 import { GiBookshelf } from "react-icons/gi";
 import image from "../assets/aroundImage.png";
+import { IoIosSearch } from "react-icons/io";
 
 export const Search_Bar = () => {
   return (
@@ -12,7 +13,12 @@ export const Search_Bar = () => {
           {" "}
           All <GoTriangleDown />
         </div>
-        <input className="search-space" type="text" placeholder="Search" />
+        <div className="search-space">
+
+        <input  type="text" className="input-search" placeholder="Search" />
+        <IoIosSearch className="searchbar-icons" style={{fontSize:"20px"}}/>
+        </div>
+        
         <div className="dot">
           <FaStaylinked className="searchbar-icons"/>
         </div>

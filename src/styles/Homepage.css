@@ -77,9 +77,14 @@ body {
 .search-space{
   width: 70%;
   background-color: white;
+  border-right: 2px solid #f7f7fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-search{
   border: none;
   padding: 0 0 0 0.9rem;
-  border-right: 2px solid #f7f7fa;
 }
 input::placeholder{
   color: #dfdfdf;
