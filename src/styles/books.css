@@ -1,0 +1,25 @@
+.books{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 0.6rem;
+}
+.book{
+    width: 7rem;
+    /* height: 13rem; */
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: white;
+}
+.img{
+    width: 6rem;
+}
+.title,.book-author{
+    margin: 0.8rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.rating{
+    font-weight: bold;
+}
