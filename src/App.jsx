@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import WelcomePage from './components/WelcomePage'
-import { Homepage } from './components/Homepage'
-import Login from './components/Login';
-import Register from "./components/Register";
+import Login from './components/Login'
+import WelcomePage from "./components/WelcomePage"
+import Register from './components/Register'
+import {Homepage} from './components/Homepage'
 
 
 
@@ -10,26 +10,28 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element:<WelcomePage/>,
+      element: <WelcomePage/>,//WelcomePage
     },
     {
       path: "/login",
-      element:<Login/> ,
+      element: <Login/>,//Login
     },
     {
       path: "/register",
-      element:<Register/> ,
+      element: <Register/>,//Register
     },
     {
       path: "/home",
-      element:<Homepage/> ,
+      element: <Homepage/>,//Homepage
     }
   ]);
   return (
     <>
         <RouterProvider router={router} />
+        
     </>
   );
 }
+
 
 export default App

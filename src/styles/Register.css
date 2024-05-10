@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../assets/background.png');
+    background-position: left;
+    background-size:cover;
+    
 }
 .mainRegister{
     border-radius: 10px;
