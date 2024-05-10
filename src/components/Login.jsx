@@ -2,6 +2,7 @@ import '../styles/Login.css';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import {  Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -10,11 +11,12 @@ const schema = yup.object().shape({
     password: yup.string().required('password is required'),
 });
 function Login() {
+    const navigate =useNavigate()
     const { register, handleSubmit, formState: {errors}, reset} = useForm({
         resolver: yupResolver(schema),
     });
-
     const onSubmit = (data) => {
+        navigate("/home")
         console.log(data);
         reset();
     }
@@ -40,9 +42,9 @@ function Login() {
                         <p className='errorMessage'>{errors.password?.message}</p>
                         </section>
                         <section className='flexRow'> <p className='checkboxContent'><input type="checkbox" name="Remember me" id="" /> <label htmlFor="">Remember me</label></p>  <a href="">Forgot Password?</a></section>
-                        <input className='loginButton' type="submit" value="Login" />
+                        <input className='loginButton' type="submit"  value="Login" />
                     </form>
-                        <section className='flexRow others'><p>New User? <a>Register Here</a></p> <p>Use as Guest</p></section>
+                        <section className='flexRow others'><p>New User? <Link to='/register'>Register Here</Link></p> <p>Use as Guest</p></section>
             </section>
         </div>
     );

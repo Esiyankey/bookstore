@@ -2,6 +2,7 @@ import '../styles/Register.css';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Link } from 'react-router-dom';
 
 const schema = yup.object().shape({
     studentNumber: yup.string().required("Student number required"),
@@ -69,7 +70,7 @@ function Register() {
 
 
 
-                        <section className='flexRow others'><p>Already a User? <a>Login now</a></p> <p>Use as Guest</p></section>
+                        <section className='flexRow others'><p>Already a User? <Link to='/login'>Login now</Link></p> <p>Use as Guest</p></section>
             </section>
         </div>
     );

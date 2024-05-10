@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     gap: 0.6rem;
+    margin-bottom: 3rem;
 }
 .book{
     width: 7rem;

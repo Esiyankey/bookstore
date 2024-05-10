@@ -1,14 +1,12 @@
-body {
-  background-color: #ea7750;
-}
 .homepage {
+  background-color: #ea7750;
   padding: 2rem;
 }
 .homepage-subbackground {
   display: flex;
   background-color: white;
   border-radius: 0.4rem;
-  height: 100vh;
+  height: 100%;
 }
 .side-bar {
   flex: 20%;
@@ -20,6 +18,8 @@ body {
   flex: 90%;
   background-color: #f3f3f7;
   height: 100%;
+  border-radius: 0.4rem;
+
 }
 .heading {
   margin: 3rem;
@@ -86,8 +86,12 @@ body {
   border: none;
   padding: 0 0 0 0.9rem;
 }
+.input-search:focus{
+  outline: none;
+}
 input::placeholder {
   color: #dfdfdf;
+  font-size: 1rem;
 }
 .dot {
   display: flex;
