@@ -20,9 +20,6 @@ export const Search_Bar = () => {
   return (
     <div className="main-searchbar">
       <div className="search">
-
-        <div className="all">All</div>
-
         <div className="all">All</div>
         <div className="search-space">
           <input
