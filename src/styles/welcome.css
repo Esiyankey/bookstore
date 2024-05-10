@@ -12,3 +12,7 @@
     min-height: 100vh;
     font-size: 3rem;
 }
+.my{
+    display: flex;
+   gap: 10px;
+}
