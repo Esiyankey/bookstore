@@ -5,7 +5,6 @@ import { GiBookshelf } from "react-icons/gi";
 import image from "../assets/aroundImage.png";
 import { IoIosSearch } from "react-icons/io";
 
-
 export const Search_Bar = () => {
   const [search, setSearch] = useState("");
   const searchBook = () => {
@@ -21,6 +20,9 @@ export const Search_Bar = () => {
   return (
     <div className="main-searchbar">
       <div className="search">
+
+        <div className="all">All</div>
+
         <div className="all">All</div>
         <div className="search-space">
           <input
