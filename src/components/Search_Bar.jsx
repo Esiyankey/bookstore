@@ -1,22 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext} from "react";
 import { GoTriangleDown } from "react-icons/go";
 import { FaStaylinked } from "react-icons/fa6";
 import { GiBookshelf } from "react-icons/gi";
 import image from "../assets/aroundImage.png";
 import { IoIosSearch } from "react-icons/io";
+import { SearchContext } from "./HomepageMain";
 
 export const Search_Bar = () => {
-  const [search, setSearch] = useState("");
-  const searchBook = () => {
-    if (event.key === "Enter") {
-      console.log("hello");
-      setSearch("");
-    }
-  };
-  const handleClick = () => {
-    console.log("clicked");
-    setSearch("");
-  };
+  
+  const searchObject = useContext(SearchContext);
+
   return (
     <div className="main-searchbar">
       <div className="search">
@@ -28,14 +21,15 @@ export const Search_Bar = () => {
           <input
             type="text"
             className="input-search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={searchBook}
+            value={searchObject.searchValue}
+            onChange={searchObject.getSearchValueFunction}
+            onKeyDown={searchObject.searchBook}
             placeholder="Search"
+            onFocus={searchObject.onFocus}
           />
           <IoIosSearch
             className="searchbar-icons"
-            onClick={handleClick}
+            onClick={searchObject.clickFunction}
             style={{ fontSize: "20px" }}
           />
         </div>

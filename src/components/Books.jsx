@@ -1,14 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import image from "../assets/aroundImage.png";
 import "../styles/books.css";
+import { SearchContext } from "./HomepageMain";
+
 export const Books = () => {
   const [books, setBooks] = useState([]);
+
+  const searchObject2 = useContext(SearchContext);
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
         const response = await fetch(
-          "https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks&key=AIzaSyCtyMhzEs0GwNdNV2MqeafsDIhgRcW-N3Y"
+          `https://www.googleapis.com/books/v1/volumes?q=${searchObject2.searchValue}&key=AIzaSyCtyMhzEs0GwNdNV2MqeafsDIhgRcW-N3Y`
         );
         const data = await response.json();
         console.log("Fetched data:", data.items);
@@ -19,7 +23,7 @@ export const Books = () => {
     };
 
     fetchBooks();
-  }, []);
+  }, [searchObject2.searchValue]);
 
   return (
     <>
