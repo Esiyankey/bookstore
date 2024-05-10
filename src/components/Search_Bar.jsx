@@ -4,7 +4,6 @@ import { FaStaylinked } from "react-icons/fa6";
 import { GiBookshelf } from "react-icons/gi";
 import image from "../assets/aroundImage.png";
 import { IoIosSearch } from "react-icons/io";
-import { CgHello } from "react-icons/cg";
 
 export const Search_Bar = () => {
   const [search,setSearch]=useState("")
@@ -23,7 +22,7 @@ export const Search_Bar = () => {
       <div className="search">
         <div className="all">
           {" "}
-          All <GoTriangleDown />
+          All 
         </div>
         <div className="search-space">
 
