@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "../styles/welcome.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import AOS from "aos";
 
 const WelcomePage = () => {
-  const navigate =useNavigate()
+  const navigate = useNavigate();
   const [showWelcome, setShowWelcome] = useState(true);
-  useEffect ( () => {
+  useEffect(() => {
     const timed = setTimeout(() => {
       setShowWelcome(false);
-      navigate('/login');
+      navigate("/login");
+      AOS.init();
     }, 2000);
     return () => clearTimeout(timed);
   }, [history]);
@@ -18,10 +20,13 @@ const WelcomePage = () => {
       {showWelcome && (
         <div className="welcome-note">
           {" "}
-          <div>
-            My <span style={{ color: "#ea7750" }}>Book</span>
+          <div className="my">
+            <div data-aos="fade-right">My</div>{" "}
+            <div data-aos="fade-left">
+              <span style={{ color: "#ea7750" }}>Book</span>
+            </div>
           </div>
-          <div> Shelf</div>{" "}
+          <div data-aos="fade-up"> Shelf</div>{" "}
         </div>
       )}
     </>
