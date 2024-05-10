@@ -1,4 +1,4 @@
-import React from "react";
+import {useState,useEffect} from "react";
 import "../styles/welcome.css";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
