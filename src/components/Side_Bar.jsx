@@ -16,10 +16,10 @@ export const Side_Bar = () => {
       <div className='shelf'> Shelf</div>{" "}
       </div>
       <div className="links">
-        <Link className='link-li'><AiFillHome />Home</Link>
-        <Link className='link-li'><IoIosSearch />Search</Link>
-        <Link className='link-li'><FaRegChartBar />Categories</Link>
-        <Link className='link-li'><MdOutlinePayments />Payments</Link>
+        <Link to="/home" className='link-li'><AiFillHome />Home</Link>
+        <Link to="/home/main/search" className='link-li'><IoIosSearch />Search</Link>
+        <Link to="/home/main/categories" className='link-li'><FaRegChartBar />Categories</Link>
+        <Link to="/payments" className='link-li'><MdOutlinePayments />Payments</Link>
 
       </div>
     </div>

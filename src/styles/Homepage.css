@@ -19,7 +19,6 @@
   background-color: #f3f3f7;
   height: 100%;
   border-radius: 0.4rem;
-
 }
 .heading {
   margin: 3rem;
@@ -86,7 +85,7 @@
   border: none;
   padding: 0 0 0 0.9rem;
 }
-.input-search:focus{
+.input-search:focus {
   outline: none;
 }
 input::placeholder {
@@ -113,6 +112,40 @@ input::placeholder {
   background-color: white;
   color: #6e6e6e;
 }
+.categories-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  background-color: #fff;
+  width: 90px;
+  padding: 1.2rem;
+  border: 2px solid #efeff1;
+  border-radius: 20px;
+  transition: 0.9s ease;
+}
+.dropdown-active {
+  display: block;
+}
+.dropdown li {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  list-style: none;
+}
+.dropdown li:hover {
+  color: #ea7750;
+}
 .image {
   border-radius: 50%;
 }
@@ -130,10 +163,10 @@ input::placeholder {
 .today {
   margin-bottom: 1.5rem;
 }
-.quote p{
+.quote p {
   margin-bottom: 1.5rem;
 }
-.author{
+.author {
   display: flex;
   justify-content: end;
   font-size: 0.8rem;
