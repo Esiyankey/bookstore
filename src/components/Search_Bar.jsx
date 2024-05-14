@@ -1,22 +1,31 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { GoTriangleDown } from "react-icons/go";
 import { FaStaylinked } from "react-icons/fa6";
 import { GiBookshelf } from "react-icons/gi";
-import image from "../assets/aroundImage.png";
+import image from "../assets/image.jpg";
 import { IoIosSearch } from "react-icons/io";
 import Aos from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
+import { useBooks } from "../context/books_context";
 
 export const Search_Bar = () => {
-  useEffect(()=>{
-    Aos.init({duration: 150});
-  })
+  useEffect(() => {
+    Aos.init({ duration: 150 });
+  });
 
   const [search, setSearch] = useState("");
+
+  const { fetchBooks } = useBooks();
   const [showdropdown, setShowDropdown] = useState(false);
-  const searchBook = () => {
+  const education="Education";
+  const farming="Farming";
+  const agriculture="Agriculture";
+  const storybooks="Story books";
+  const technology="Technology";
+
+  const searchBook = async () => {
     if (event.key === "Enter") {
-      console.log("hello");
+      await fetchBooks(search);
       setSearch("");
     }
   };
@@ -27,6 +36,21 @@ export const Search_Bar = () => {
   const handleShowDropDown = () => {
     setShowDropdown(!showdropdown);
   };
+  const handleCategoriesEducation=async()=>{
+    await fetchBooks(education)
+  }
+  const handleCategoriesStoryBooks=async()=>{
+    await fetchBooks(storybooks)
+  }
+  const handleCategoriesAgriculture=async()=>{
+    await fetchBooks(agriculture)
+  }
+  const handleCategoriesTechnology=async()=>{
+    await fetchBooks(technology)
+  }
+  const handleCategoriesFarming=async()=>{
+    await fetchBooks(farming)
+  }
   return (
     <div className="main-searchbar">
       <div className="search">
@@ -54,7 +78,7 @@ export const Search_Bar = () => {
 
       <div className="categories-dropdown">
         <div className="categories">
-          <div>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"0.2rem"}}>
             <GiBookshelf className="searchbar-icons" />
             Categories
             <GoTriangleDown onClick={handleShowDropDown} />
@@ -67,17 +91,17 @@ export const Search_Bar = () => {
           className={`dropdown ${showdropdown ? "dropdown-active" : ""}`}
         >
           <ul>
-            <li>Education</li>
-            <li>Agriculture</li>
-            <li>Technology</li>
-            <li>Farming</li>
+            <li onClick={handleCategoriesEducation}>Education</li>
+            <li onClick={handleCategoriesAgriculture}>Agriculture</li>
+            <li onClick={handleCategoriesTechnology}>Technology</li>
+            <li onClick={handleCategoriesFarming}>Farming</li>
+            <li onClick={handleCategoriesStoryBooks}>StoryBooks</li>
           </ul>
         </div>
       </div>
       <div className="profile">
         <img src={image} alt="image" className="image" width={25} height={20} />
         Adwoa
-        <GoTriangleDown />
       </div>
     </div>
   );

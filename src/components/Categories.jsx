@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Books } from "./Books";
 
 export const Categories = () => {
   return (
-    <div>Categories</div>
-  )
-}
+    <div style={{ padding: "3rem" }}>
+      <Books/>
+    </div>
+  );
+};

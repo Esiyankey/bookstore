@@ -1,6 +1,7 @@
 .homepage {
   background-color: #ea7750;
   padding: 2rem;
+  height: 100%;
 }
 .homepage-subbackground {
   display: flex;
@@ -98,8 +99,7 @@ input::placeholder {
   align-items: center;
   padding-left: 1rem;
 }
-.categories,
-.profile {
+.categories {
   border: 1px solid gray;
   border-radius: 30px;
   display: flex;
@@ -108,6 +108,19 @@ input::placeholder {
   gap: 0.3rem;
   font-size: 1rem;
   padding: 0.7rem 0.8rem 0.7rem 0.8rem;
+  border: 2px solid #efeff1;
+  background-color: white;
+  color: #6e6e6e;
+}
+.profile{
+  border: 1px solid gray;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
   border: 2px solid #efeff1;
   background-color: white;
   color: #6e6e6e;
@@ -148,6 +161,8 @@ input::placeholder {
 }
 .image {
   border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
 .searchbar-icons {
   color: #ea7750;

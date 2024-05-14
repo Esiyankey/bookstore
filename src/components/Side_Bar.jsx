@@ -17,8 +17,8 @@ export const Side_Bar = () => {
       </div>
       <div className="links">
         <Link to="/home" className='link-li'><AiFillHome />Home</Link>
-        <Link to="/home/main/search" className='link-li'><IoIosSearch />Search</Link>
-        <Link to="/home/main/categories" className='link-li'><FaRegChartBar />Categories</Link>
+        <Link to="/home/search" className='link-li'><IoIosSearch />Search</Link>
+        <Link to="/home/categories" className='link-li'><FaRegChartBar />Categories</Link>
         <Link to="/payments" className='link-li'><MdOutlinePayments />Payments</Link>
 
       </div>
