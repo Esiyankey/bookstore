@@ -4,7 +4,7 @@ import Register from "./components/Register";
 import { Homepage } from "./components/Homepage";
 import { Welcome } from "./components/Welcome";
 import { Side_Bar } from "./components/Side_Bar";
-import { HomepageMain } from "./components/HomepageMain";
+import { Payment}  from "./components/Payment";
 import { SearchPage } from "./components/SearchPage";
 import { Categories } from "./components/Categories";
 import { Outlet__Page } from "./components/Outlet__Page";
@@ -39,6 +39,11 @@ function App() {
           path: "categories",
           element: <Categories />,
         },
+        {
+          path: "payments",
+          element: <Payment/>,
+        },
+
       ],
     },
   ]);
